@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TEST : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class TEST : MonoBehaviour
     bool TF3 = false;
     bool TF2 = false;
     bool TF1 = false;
+    [SerializeField]
+    string levelToLoad = "Space";
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,7 @@ public class TEST : MonoBehaviour
         if (collision.gameObject.tag == "rocketHome" && TF4 == true)
         {
             Debug.Log("you win for now");
+            SceneManager.LoadScene(levelToLoad);
         }
     }
 }
