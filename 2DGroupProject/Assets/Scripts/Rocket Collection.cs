@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TEST : MonoBehaviour
+public class RocketCollection : MonoBehaviour
 {
     bool TF4 = false;
     bool TF3 = false;
