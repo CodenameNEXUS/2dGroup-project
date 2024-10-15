@@ -15,6 +15,20 @@ public class DontDestroyonload : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    void Awake()
+    {
+        if (tag == "Player")
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
+        SpawnPos = GameObject.FindGameObjectWithTag("SpawnPos");
+        gameObject.transform.position = SpawnPos.transform.position;
+    }
+    private void OnLevelWasLoaded(int level)
+    {
+        SpawnPos = GameObject.FindGameObjectWithTag("SpawnPos");
+        gameObject.transform.position = SpawnPos.transform.position;
     }
 }
