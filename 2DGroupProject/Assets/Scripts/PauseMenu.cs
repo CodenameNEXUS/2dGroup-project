@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         //If the escape key is pressed
-        if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
+        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
         {
             //display the pause menu
             GetComponent<Canvas>().enabled = true;
@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
             Resume();
         }
     }
-    public void Resume() 
+    public void Resume()
     {
         //hide the pause canvas again
         GetComponent<Canvas>().enabled = false;
@@ -49,10 +49,15 @@ public class PauseMenu : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene ("cave");
+        SceneManager.LoadScene("cave");
     }
     public void LVLSelect()
     {
-        SceneManager.LoadScene ("LVLSelect");
+        SceneManager.LoadScene("LVLSelect");
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
     }
 }
+
