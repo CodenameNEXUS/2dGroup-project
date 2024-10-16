@@ -16,11 +16,17 @@ public class EnemyAI : MonoBehaviour
     float homeSpeed = 5f;
     [SerializeField]
     float homeDistance = 13f;
+    Rigidbody2D rb;
+    Animator anim;
+    public Animator animator;
+    
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         homePosition = transform.position;
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,7 +41,7 @@ public class EnemyAI : MonoBehaviour
             //move towards the player
             chaseDir.Normalize();
             GetComponent<Rigidbody2D>().velocity = chaseDir * chaseSpeed;
-
+            
         }
         else if (goHome)
         {
@@ -43,18 +49,22 @@ public class EnemyAI : MonoBehaviour
             {
                 transform.position = homePosition;
                 GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
             }
             else
             {
                 homeDir.Normalize();
                 GetComponent<Rigidbody2D>().velocity = homeDir * homeSpeed;
+
             }
         }
         else 
         {
             //if the player is NOT close, stop moving
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            
         }
 
     }
+    
 }

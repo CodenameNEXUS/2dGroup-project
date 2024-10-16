@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    [SerializeField]
+    bool pause = true;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Canvas>().enabled = false;
+        GetComponent<Canvas>().enabled = pause;
     }
 
     // Update is called once per frame
@@ -51,6 +53,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void LVLSelect()
     {
-        SceneManager.LoadScene ("Select");
+        SceneManager.LoadScene ("LVLSelect");
     }
 }
