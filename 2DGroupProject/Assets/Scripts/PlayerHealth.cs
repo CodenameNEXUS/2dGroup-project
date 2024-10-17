@@ -21,6 +21,8 @@ public class PlayerHealth : MonoBehaviour
     float enemyBulletDMG = 5f;
     [SerializeField]
     float heal = 5f;
+    [SerializeField]
+    float biteDMG = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,6 +84,15 @@ public class PlayerHealth : MonoBehaviour
 
             }
         }
+        if (collision.gameObject.tag == "biteDMG")
+        {
+            health -= biteDMG;
+            healthBar.fillAmount = health / maxHP;
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
+            }
+        }
     }
 }
