@@ -84,7 +84,7 @@ public class PlayerHealth : MonoBehaviour
 
             }
         }
-        if (collision.gameObject.tag == "biteDMG")
+        if (collision.gameObject.tag == "EnemyBite")
         {
             health -= biteDMG;
             healthBar.fillAmount = health / maxHP;
