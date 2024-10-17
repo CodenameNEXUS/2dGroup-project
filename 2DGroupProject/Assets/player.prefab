@@ -806,7 +806,7 @@ GameObject:
   - component: {fileID: 5980181152893837093}
   - component: {fileID: 6855993007424635681}
   - component: {fileID: 3143616419325437917}
-  - component: {fileID: 2959745752424090524}
+  - component: {fileID: 8652057761657202298}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -1047,7 +1047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Space
---- !u!114 &2959745752424090524
+--- !u!114 &8652057761657202298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2866817104973624924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcc41a45122371a468ac61502ebbefa9, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ac494e2fb7a75d48a77df3a35c3aade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Landon TEST
