@@ -17,8 +17,10 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     float homeDistance = 13f;
     Rigidbody2D rb;
-    Animator anim;
     public Animator animator;
+    float timer = 0;
+    public float delayTime = 0.25f;
+    bool spotted = false;
     
     // Start is called before the first frame update
     void Start()
@@ -26,21 +28,31 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         homePosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
         //the chase direction is destination - enemy starting position
         Vector3 playerPosition = player.transform.position;
         Vector3 chaseDir = playerPosition - transform.position;
         Vector3 homeDir = homePosition - transform.position;
         if (chaseDir.magnitude < chaseTriggerDistance)
         {
-            //move towards the player
-            chaseDir.Normalize();
-            GetComponent<Rigidbody2D>().velocity = chaseDir * chaseSpeed;
+            if (rb.velocity == Vector2.zero && /*timer < delayTime &&*/ !spotted)
+            {
+                animator.SetTrigger("Spot");
+                Debug.Log("foo");
+                spotted = true;
+            }
+            else
+            {
+                //move towards the player
+                chaseDir.Normalize();
+                rb.velocity = chaseDir * chaseSpeed;
+            }
             
         }
         else if (goHome)
@@ -48,22 +60,27 @@ public class EnemyAI : MonoBehaviour
             if (homeDir.magnitude < 0.1f)
             {
                 transform.position = homePosition;
-                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                rb.velocity = Vector3.zero;
+                timer = 0;
 
             }
             else
             {
                 homeDir.Normalize();
-                GetComponent<Rigidbody2D>().velocity = homeDir * homeSpeed;
+                rb.velocity = homeDir * homeSpeed;
+                timer = 0;
 
             }
         }
         else 
         {
             //if the player is NOT close, stop moving
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            rb.velocity = Vector3.zero;
+            spotted = false;
             
         }
+        animator.SetFloat("x", rb.velocity.x);
+        animator.SetFloat ("y", rb.velocity.y);
 
     }
     
