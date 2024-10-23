@@ -19,7 +19,7 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         maxHP = health;
-        healthBar = GetComponentsInChildren<Image>()[1];
+        //healthBar = GetComponentsInChildren<Image>()[1];
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "PlayerBullet")
         {
             health -= playerDamage;
-            healthBar.fillAmount = health / maxHP;
+            //healthBar.fillAmount = health / maxHP;
             if (health < 0)
             {
                 Destroy(gameObject);
@@ -41,11 +41,20 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "PlayerSnipe")
         {
             health -= playerSnipeDMG;
-            healthBar.fillAmount = health / maxHP;
+            //healthBar.fillAmount = health / maxHP;
             if (health < 0)
             {
                 Destroy(gameObject);
             }
         }
     }
+    public void OnEnemyJustDied()
+    {
+        if (Random.Range(0f, 1f) <= m_dropChance)
+        {
+            // spawn a dropped item
+        }
+    }
+
+    const float m_dropChance = 1f / 10f;  // Set odds here - e.g. 1 in 10 chance.
 }
