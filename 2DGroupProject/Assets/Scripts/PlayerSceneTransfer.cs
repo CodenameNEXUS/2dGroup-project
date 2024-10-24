@@ -17,8 +17,6 @@ public class PlayerSceneTransfer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        menu = GameObject.FindGameObjectWithTag("menu");
         player = GameObject.FindGameObjectWithTag("Player");
         SpawnPos = GameObject.FindGameObjectWithTag("SpawnPos");
         if (player != null)
@@ -36,16 +34,22 @@ public class PlayerSceneTransfer : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = true;
             GetComponentInChildren<Canvas>().enabled = true;
         }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
         /*if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(levelToLoad);
             gameObject.transform.position = SpawnPos.transform.position;
         }*/
+        if (OriginalPlayer == false)
+        {
+            Destroy(gameObject);
+        }
     }
     void Awake()
     {
@@ -53,6 +57,7 @@ public class PlayerSceneTransfer : MonoBehaviour
             {
                 DontDestroyOnLoad(this.gameObject);
             }
+        
         SpawnPos = GameObject.FindGameObjectWithTag("SpawnPos");
         gameObject.transform.position = SpawnPos.transform.position;
     }

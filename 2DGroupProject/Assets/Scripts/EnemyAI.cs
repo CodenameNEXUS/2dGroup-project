@@ -41,14 +41,16 @@ public class EnemyAI : MonoBehaviour
         Vector3 homeDir = homePosition - transform.position;
         if (chaseDir.magnitude < chaseTriggerDistance)
         {
-            if (rb.velocity == Vector2.zero && /*timer < delayTime &&*/ !spotted)
+            if (rb.velocity == Vector2.zero && timer < delayTime && !spotted)
             {
                 animator.SetTrigger("Spot");
                 Debug.Log("foo");
                 spotted = true;
+                timer = 0;
             }
-            else
+            else if (timer < delayTime)
             {
+
                 //move towards the player
                 chaseDir.Normalize();
                 rb.velocity = chaseDir * chaseSpeed;

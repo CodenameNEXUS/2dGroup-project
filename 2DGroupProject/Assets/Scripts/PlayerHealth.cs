@@ -64,9 +64,9 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Heal")
+        if (collision.gameObject.tag == "SpawnPos")
         {
-            health += heal;
+            health += 100;
             healthBar.fillAmount = health / maxHP;
             if(health > 100)
             {

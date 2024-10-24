@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7373652807997870169}
   - component: {fileID: 4798903516668103457}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: player Bullet
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

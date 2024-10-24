@@ -32,10 +32,10 @@ public class PlayerShoot : MonoBehaviour
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
             mousePos.z = 0;
             Vector3 mouseDir = mousePos - transform.position;
-            //normalize the vector so we dont have wonky speeds
-            mouseDir.Normalize();
             //spawn bullet
             GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
+            //normalize the vector so we dont have wonky speeds
+            mouseDir.Normalize();
             //push the bullet towards the mouse
             bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * bulletSpeed;
             Destroy(bullet, bulletLifetime);
