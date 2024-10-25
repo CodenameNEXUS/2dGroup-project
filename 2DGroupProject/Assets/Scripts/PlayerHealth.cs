@@ -23,6 +23,8 @@ public class PlayerHealth : MonoBehaviour
     float heal = 5f;
     [SerializeField]
     float biteDMG = 5f;
+    [SerializeField]
+    float hazardDMG = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log(collision.gameObject.name);
         //IF we hit an enemy, reduce player HP
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == "enemy")
         {
             health -= gruntDamage;
             healthBar.fillAmount = health / maxHP;
@@ -50,7 +52,7 @@ public class PlayerHealth : MonoBehaviour
                 //SceneManager.LoadScene(levelToLoad);
             }
         }
-        if(collision.gameObject.tag == "boss")
+        if (collision.gameObject.tag == "boss")
         {
             health -= bossDamage;
             healthBar.fillAmount = health / maxHP;
@@ -92,6 +94,18 @@ public class PlayerHealth : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
+            }
+        }
+        if (collision.gameObject.tag == "Hazards")
+        {
+            health -= hazardDMG;
+            healthBar.fillAmount = health / maxHP;
+            //add consequences
+            //IF health gets to low reload current level
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                //SceneManager.LoadScene(levelToLoad);
             }
         }
     }

@@ -38,13 +38,13 @@ public class PlayerShoot : MonoBehaviour
     {
         timer += Time.deltaTime; //0.016667 = 60 fps
                                  //IF you click
-        if (Input.GetKeyUp(KeyCode.E) && boom && timer > 0.1f)
+        if (Input.GetKeyUp(KeyCode.E) && boom && timer > SwapDelay)
         {
             shoot = true;
             boom = false;
-            timer = shootDelay - 0.1f;
+            timer = 0;
         }
-        if (Input.GetKeyUp(KeyCode.E) && shoot && timer > 0.1f)
+        if (Input.GetKeyUp(KeyCode.E) && shoot && timer > SwapDelay)
         {
             shoot = false;
             boom = true;
