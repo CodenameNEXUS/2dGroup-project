@@ -48,7 +48,7 @@ public class EnemyAI : MonoBehaviour
                 spotted = true;
                 timer = 0;
             }
-            else if (timer < delayTime)
+            else
             {
 
                 //move towards the player
@@ -74,7 +74,7 @@ public class EnemyAI : MonoBehaviour
 
             }
         }
-        else 
+        else if (chaseDir.magnitude > chaseTriggerDistance)
         {
             //if the player is NOT close, stop moving
             rb.velocity = Vector3.zero;

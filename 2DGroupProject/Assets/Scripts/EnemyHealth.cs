@@ -38,7 +38,7 @@ public class EnemyHealth : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if (collision.gameObject.tag == "PlayerSnipe")
+        if (collision.gameObject.tag == "Rocket")
         {
             health -= playerSnipeDMG;
             //healthBar.fillAmount = health / maxHP;

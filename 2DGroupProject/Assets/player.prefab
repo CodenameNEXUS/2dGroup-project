@@ -897,8 +897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfa66bae0a74144490e6cc78faf3171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  jumpSpeed: 2.6
+  moveSpeed: 12.77
+  jumpSpeed: 5.88
 --- !u!50 &2240232102891975767
 Rigidbody2D:
   serializedVersion: 4
@@ -914,7 +914,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.91
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1020,6 +1020,12 @@ MonoBehaviour:
   bulletSpeed: 15
   bulletLifetime: 2
   shootDelay: 0.22
+  boomDelay: 2.09
+  rocket: {fileID: 3372932412590297597, guid: 98493d5e37dc6a449b8323b21f9af1ce, type: 3}
+  rocketLifetime: 2
+  shoot: 1
+  boom: 0
+  boomSpeed: 35.6
 --- !u!114 &6064648714070897114
 MonoBehaviour:
   m_ObjectHideFlags: 0
