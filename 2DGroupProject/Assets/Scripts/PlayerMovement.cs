@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Knockback.IsBeingKnockedBack)
-        {
+        //if (!Knockback.IsBeingKnockedBack)
+        //{
             float moveX = Input.GetAxis("Horizontal");
             Vector2 velocity = rb.velocity;
             velocity.x = moveX * moveSpeed;
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 GetComponent<SpriteRenderer>().flipX = true;
             }*/
-        }
+       //}
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

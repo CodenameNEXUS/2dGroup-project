@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    [SerializeField]
-    GameObject prefab;
+    
     [SerializeField]
     float bulletSpeed = 10f;
     [SerializeField]
     float bulletLifetime = 2.0f;
-    float timer = 0;
+    private float timer = 0;
     [SerializeField]
-    float shootDelay = 0.5f;
+    private float shootDelay = 0.5f;
     GameObject player;
     [SerializeField]
     float shootDistance = 5;
+    [SerializeField] private Rigidbody2D bulletPrefab;
+
+
+    private Rigidbody2D bulletRB;
+
+    private EnemyProjectile enemyProjectile;
+
+    private Collider2D coll;
+
     // Start is called before the first frame update
     void Start()
     {
+        coll = GetComponent<Collider2D>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -32,13 +41,22 @@ public class EnemyShoot : MonoBehaviour
         {
             // shoot towards the player
             //spawn the bullet
-            GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
-            //push the bullet towrads the player
-            shootDir.Normalize();
-            bullet.GetComponent<Rigidbody2D>().velocity = shootDir * bulletSpeed;
+            shoot();
             // delay the next bullet
-            timer = 0;
-            Destroy(bullet, bulletLifetime);
+            Destroy(bulletPrefab, bulletLifetime);
         }
+    }
+    private void shoot()
+    {
+        bulletRB = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        //push the bullet towrads the player
+        
+        bulletRB.velocity = bulletRB.transform.right * bulletSpeed;
+
+        enemyProjectile = bulletRB.gameObject.GetComponent<EnemyProjectile>();
+
+        enemyProjectile.EnemyColl = coll;
+
+        timer = 0;
     }
 }
