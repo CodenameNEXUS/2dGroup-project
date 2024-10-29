@@ -808,7 +808,9 @@ GameObject:
   - component: {fileID: 620269851170568814}
   - component: {fileID: 6064648714070897114}
   - component: {fileID: 2338720753571792668}
-  m_Layer: 0
+  - component: {fileID: 8918361029186510541}
+  - component: {fileID: 5164152392281447085}
+  m_Layer: 8
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -938,14 +940,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc4b42ca8857fb4b82941e08bc8dfed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  levelToLoad: Lose
-  healthBar: {fileID: 4279539982138019897}
-  bossDamage: 100
-  gruntDamage: 20
-  enemyBulletDMG: 5
-  heal: 5
-  biteDMG: 5
+  maxhealth: 100
+  healthBar: {fileID: 0}
+  iframes: 0.1
 --- !u!61 &6855993007424635681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1021,11 +1018,12 @@ MonoBehaviour:
   bulletLifetime: 2
   shootDelay: 0.22
   boomDelay: 2.09
-  rocket: {fileID: 3372932412590297597, guid: 98493d5e37dc6a449b8323b21f9af1ce, type: 3}
+  rocket: {fileID: 4590585575392954682, guid: e48b8752566e86843874be215309b2c6, type: 3}
   rocketLifetime: 2
   shoot: 1
   boom: 0
   boomSpeed: 35.6
+  SwapDelay: 0.1
 --- !u!114 &6064648714070897114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,6 +1068,57 @@ CapsuleCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.93273926, y: 1.9663695}
+  m_Direction: 0
+--- !u!114 &8918361029186510541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866817104973624924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cee8361cdae4b45ba10a5bbd7e3d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbacktime: 0.2
+  hitDiretionForce: 98.26
+  constForce: 5
+  inputForce: 7.5
+--- !u!70 &5164152392281447085
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866817104973624924}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

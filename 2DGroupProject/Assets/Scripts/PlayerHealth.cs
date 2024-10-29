@@ -1,26 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] private float maxhealth = 100f;
 
+    [SerializeField]
+    Image healthBar;
+
+    float timer;
+
+    [SerializeField]float iframes;
+
     private float currentHealth;
+
+    private knockback knockback;
 
     private void Start()
     {
+        timer += Time.deltaTime;
         currentHealth = maxhealth;
+        knockback = GetComponent<knockback>();
     }
 
     public void Damage(float damageAmount)
     {
-        currentHealth -= damageAmount;
-        if (currentHealth <= 0)
+        timer += Time.deltaTime;
+        if (timer >= iframes)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+
+            currentHealth -= damageAmount;
+            timer = 0;
+            healthBar.fillAmount = maxhealth - damageAmount;
+            if (currentHealth <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+
+            knockback.callKnockback(transform.right, Vector2.up, Input.GetAxisRaw("Horizontal"));
         }
     }
 

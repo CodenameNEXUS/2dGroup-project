@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyProjectile : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour, IDamageable
 {
     [SerializeField] private float damageAmount = 7f;
     private IDamageable idamageable;
@@ -14,7 +14,7 @@ public class EnemyProjectile : MonoBehaviour
     {
         coll = GetComponent<Collider2D>();
 
-        IgnoreCollisionWithEnemyToggle();
+        
     }
 
 
@@ -28,17 +28,10 @@ public class EnemyProjectile : MonoBehaviour
         }
     }
 
-    private void IgnoreCollisionWithEnemyToggle()
+    
+
+    public void Damage(float damageAmount)
     {
-        if (Physics2D.GetIgnoreCollision(coll, EnemyColl))
-        {
-            // turn on ignore collisions
-            Physics2D.IgnoreCollision(coll, EnemyColl, true);
-        }
-        else
-        {
-            //turn OFF ignore collisions
-            Physics2D.IgnoreCollision(coll, EnemyColl, false);
-        }
+        throw new System.NotImplementedException();
     }
 }

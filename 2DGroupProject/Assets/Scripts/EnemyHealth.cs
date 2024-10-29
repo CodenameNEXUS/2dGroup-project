@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] private float maxHealth = 10f;
 
@@ -14,11 +14,11 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void Damge(float damageAmount)
+    public void Damage(float damageAmount)
     {
         currentHealth -= damageAmount;
 
-        if (currentHealth <= 0) 
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -28,49 +28,52 @@ public class EnemyHealth : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    /*[SerializeField]
-    float health = 10;
-    float maxHP;
-    Image healthBar;
-    [SerializeField]
-    float playerDamage = 1f;
-    [SerializeField]
-    float playerSnipeDMG = 10f;
-    //reduce enemy health when hit by a player bullet
-    //destroy the enemy if their health gets reduced to 0 or lower
-    // Start is called before the first frame update
-    void Start()
-    {
-        maxHP = health;
-        //healthBar = GetComponentsInChildren<Image>()[1];
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "PlayerBullet")
-        {
-            health -= playerDamage;
-            //healthBar.fillAmount = health / maxHP;
-            if (health < 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-        if (collision.gameObject.tag == "Rocket")
-        {
-            health -= playerSnipeDMG;
-            //healthBar.fillAmount = health / maxHP;
-            if (health < 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-    }*/
+
+
+    /*[SerializeField]
+float health = 10;
+float maxHP;
+Image healthBar;
+[SerializeField]
+float playerDamage = 1f;
+[SerializeField]
+float playerSnipeDMG = 10f;
+//reduce enemy health when hit by a player bullet
+//destroy the enemy if their health gets reduced to 0 or lower
+// Start is called before the first frame update
+void Start()
+{
+   maxHP = health;
+   //healthBar = GetComponentsInChildren<Image>()[1];
+}
+
+// Update is called once per frame
+void Update()
+{
+
+}
+private void OnTriggerEnter2D(Collider2D collision)
+{
+   if (collision.gameObject.tag == "PlayerBullet")
+   {
+       health -= playerDamage;
+       //healthBar.fillAmount = health / maxHP;
+       if (health < 0)
+       {
+           Destroy(gameObject);
+       }
+   }
+   if (collision.gameObject.tag == "Rocket")
+   {
+       health -= playerSnipeDMG;
+       //healthBar.fillAmount = health / maxHP;
+       if (health < 0)
+       {
+           Destroy(gameObject);
+       }
+   }
+}*/
     /*public void OnEnemyJustDied()
     {
         if (Random.Range(0f, 1f) <= m_dropChance)
