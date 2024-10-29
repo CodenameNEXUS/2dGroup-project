@@ -19,6 +19,7 @@ TagManager:
   - Hazards
   - enemybullet
   - Bat
+  - menu
   layers:
   - Default
   - TransparentFX
