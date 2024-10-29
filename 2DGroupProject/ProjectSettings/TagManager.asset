@@ -18,6 +18,7 @@ TagManager:
   - Rocket
   - Hazards
   - enemybullet
+  - Bat
   layers:
   - Default
   - TransparentFX
