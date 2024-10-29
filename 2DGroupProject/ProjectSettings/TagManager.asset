@@ -18,6 +18,8 @@ TagManager:
   - Rocket
   - Hazards
   - enemybullet
+  - Bat
+  - menu
   layers:
   - Default
   - TransparentFX
