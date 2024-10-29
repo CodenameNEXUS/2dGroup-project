@@ -5,7 +5,30 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] private float maxHealth = 10f;
+
+    private float currentHealth;
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
+    public void Damge(float damageAmount)
+    {
+        currentHealth -= damageAmount;
+
+        if (currentHealth <= 0) 
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
+    /*[SerializeField]
     float health = 10;
     float maxHP;
     Image healthBar;
@@ -38,7 +61,7 @@ public class EnemyHealth : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if (collision.gameObject.tag == "PlayerSnipe")
+        if (collision.gameObject.tag == "Rocket")
         {
             health -= playerSnipeDMG;
             //healthBar.fillAmount = health / maxHP;
@@ -47,14 +70,15 @@ public class EnemyHealth : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
-    public void OnEnemyJustDied()
+    }*/
+    /*public void OnEnemyJustDied()
     {
         if (Random.Range(0f, 1f) <= m_dropChance)
         {
             // spawn a dropped item
         }
-    }
+    }*/
 
-    const float m_dropChance = 1f / 10f;  // Set odds here - e.g. 1 in 10 chance.
+    //const float m_dropChance = 1f / 10f;  
+    // Set odds here - e.g. 1 in 10 chance.
 }

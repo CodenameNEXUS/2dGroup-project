@@ -6,7 +6,34 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] private float maxhealth = 100f;
+
+    private float currentHealth;
+
+    private void Start()
+    {
+        currentHealth = maxhealth;
+    }
+
+    public void Damage(float damageAmount)
+    {
+        currentHealth -= damageAmount;
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    /*[SerializeField]
     float health = 100;
     [SerializeField]
     string levelToLoad = "Lose";
@@ -23,11 +50,17 @@ public class PlayerHealth : MonoBehaviour
     float heal = 5f;
     [SerializeField]
     float biteDMG = 5f;
+    [SerializeField]
+    float hazardDMG = 5f;
+
+    private knockback knockback;
     // Start is called before the first frame update
     void Start()
     {
         maxHP = health;
         healthBar.fillAmount = health / maxHP;
+
+        knockback = GetComponent<knockback>();
     }
     // Update is called once per frame
     void Update()
@@ -38,7 +71,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log(collision.gameObject.name);
         //IF we hit an enemy, reduce player HP
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == "enemy")
         {
             health -= gruntDamage;
             healthBar.fillAmount = health / maxHP;
@@ -50,7 +83,7 @@ public class PlayerHealth : MonoBehaviour
                 //SceneManager.LoadScene(levelToLoad);
             }
         }
-        if(collision.gameObject.tag == "boss")
+        if (collision.gameObject.tag == "boss")
         {
             health -= bossDamage;
             healthBar.fillAmount = health / maxHP;
@@ -64,9 +97,9 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Heal")
+        if (collision.gameObject.tag == "SpawnPos")
         {
-            health += heal;
+            health += 100;
             healthBar.fillAmount = health / maxHP;
             if(health > 100)
             {
@@ -94,5 +127,18 @@ public class PlayerHealth : MonoBehaviour
 
             }
         }
-    }
+        if (collision.gameObject.tag == "Hazards")
+        {
+            health -= hazardDMG;
+            healthBar.fillAmount = health / maxHP;
+            //add consequences
+            //IF health gets to low reload current level
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                //SceneManager.LoadScene(levelToLoad);
+            }
+        }
+        
+    }*/
 }
