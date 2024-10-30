@@ -32,6 +32,6 @@ public class EnemyProjectile : MonoBehaviour, IDamageable
 
     public void Damage(float damageAmount)
     {
-        throw new System.NotImplementedException();
+        
     }
 }
