@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1967407664863681551}
   - component: {fileID: 1099724836804960440}
   - component: {fileID: 6598974943425036113}
+  - component: {fileID: -983542803817728961}
+  - component: {fileID: 4348990345499044556}
   m_Layer: 11
   m_Name: enemybite
   m_TagString: enemybullet
@@ -30,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 31.7246, y: -0.519, z: 0}
-  m_LocalScale: {x: 0.38914055, y: 0.44900352, z: 1}
+  m_LocalScale: {x: 0.9, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,7 +122,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.0000001, y: 2.0000002}
+  m_Size: {x: 0.46347937, y: 1.1220562}
   m_Direction: 0
 --- !u!50 &1099724836804960440
 Rigidbody2D:
@@ -162,3 +164,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 25
+--- !u!114 &-983542803817728961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117431761007022077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebc884a161fcfd43a14f9f88793a5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &4348990345499044556
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117431761007022077}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b6f26b38fd7502544acda79456261376, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

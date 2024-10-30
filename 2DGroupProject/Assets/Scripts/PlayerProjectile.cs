@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 public class PlayerProjectile : MonoBehaviour, IDamageable
@@ -31,6 +32,6 @@ public class PlayerProjectile : MonoBehaviour, IDamageable
 
     public void Damage(float damageAmount)
     {
-        throw new System.NotImplementedException();
+        
     }
 }
