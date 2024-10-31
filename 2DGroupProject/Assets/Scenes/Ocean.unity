@@ -58758,7 +58758,7 @@ GameObject:
   - component: {fileID: 426013290}
   - component: {fileID: 426013289}
   m_Layer: 0
-  m_Name: Boss Door
+  m_Name: Boss Key Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59706,7 +59706,7 @@ GameObject:
   - component: {fileID: 522454647}
   - component: {fileID: 522454646}
   m_Layer: 0
-  m_Name: secret boss door
+  m_Name: 100 kill door with boss key drop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
