@@ -7,10 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, IDamageable, IHeal
 {
-    [SerializeField] private float maxhealth = 100f;
-
-    [SerializeField]
-    Image healthBar;
+    [SerializeField] private float maxhealth = 100;
 
     float timer;
 
@@ -20,20 +17,22 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHeal
 
     private knockback knockback;
 
+    private HealthBar _healthBar;
+
     private void Start()
     {
         timer += Time.deltaTime;
         currentHealth = maxhealth;
         knockback = GetComponent<knockback>();
-        healthBar.fillAmount = currentHealth / maxhealth;
+        _healthBar = GetComponentInChildren<HealthBar>();
     }
 
 
     public void Damage(float damageAmount)
     {
         currentHealth -= damageAmount;
-        
-        healthBar.fillAmount = currentHealth - damageAmount;
+
+        _healthBar.UpdateHealthBar(maxhealth, currentHealth);
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -48,7 +47,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHeal
     {
         currentHealth += HealAmount;
 
-        healthBar.fillAmount = currentHealth - HealAmount;
+        _healthBar.UpdateHealthBar(maxhealth, currentHealth);
         if (currentHealth >= 101)
         {
             currentHealth = 100;

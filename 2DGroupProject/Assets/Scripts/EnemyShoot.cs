@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    
+
     [SerializeField]
     float bulletSpeed = 10f;
     [SerializeField]
@@ -15,7 +15,10 @@ public class EnemyShoot : MonoBehaviour
     GameObject player;
     [SerializeField]
     GameObject enemybullet;
+    [SerializeField]
     float shootDistance = 5;
+    
+    
     
 
 
@@ -29,7 +32,7 @@ public class EnemyShoot : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        enemybullet = GameObject.FindGameObjectWithTag("enemybullet");
+        
         
     }
 
