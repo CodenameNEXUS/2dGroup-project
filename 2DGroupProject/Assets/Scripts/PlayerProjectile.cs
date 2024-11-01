@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
-public class EnemyProjectile : MonoBehaviour, IDamageable
+public class PlayerProjectile : MonoBehaviour, IDamageable
 {
     [SerializeField] private float damageAmount = 7f;
     private IDamageable idamageable;
 
-    public Collider2D EnemyColl { get; set; }
     private Collider2D coll;
 
     private void Start()
     {
         coll = GetComponent<Collider2D>();
 
-        
+
     }
 
 
@@ -28,7 +28,7 @@ public class EnemyProjectile : MonoBehaviour, IDamageable
         }
     }
 
-    
+
 
     public void Damage(float damageAmount)
     {

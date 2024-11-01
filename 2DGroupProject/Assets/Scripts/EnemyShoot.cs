@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    
+
     [SerializeField]
     float bulletSpeed = 10f;
     [SerializeField]
@@ -14,21 +14,26 @@ public class EnemyShoot : MonoBehaviour
     private float shootDelay = 0.5f;
     GameObject player;
     [SerializeField]
+    GameObject enemybullet;
+    [SerializeField]
     float shootDistance = 5;
-    [SerializeField] private Rigidbody2D bulletPrefab;
+    
+    
+    
 
 
-    private Rigidbody2D bulletRB;
+    
 
     private EnemyProjectile enemyProjectile;
 
-    private Collider2D coll;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        coll = GetComponent<Collider2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        
+        
     }
 
     // Update is called once per frame
@@ -43,20 +48,30 @@ public class EnemyShoot : MonoBehaviour
             //spawn the bullet
             shoot();
             // delay the next bullet
-            Destroy(bulletPrefab, bulletLifetime);
+
         }
     }
     private void shoot()
     {
-        bulletRB = Instantiate(bulletPrefab, transform.position, transform.rotation);
-        //push the bullet towrads the player
         
-        bulletRB.velocity = bulletRB.transform.right * bulletSpeed;
+        timer += Time.deltaTime;
+        GameObject bullet = Instantiate(enemybullet, transform.position, Quaternion.identity);
+        //push the bullet towrads the player
 
-        enemyProjectile = bulletRB.gameObject.GetComponent<EnemyProjectile>();
+        bullet.GetComponent<Rigidbody2D>().transform.right = GetShootDir();
 
-        enemyProjectile.EnemyColl = coll;
+        bullet.GetComponent<Rigidbody2D>().velocity = bullet.GetComponent<Rigidbody2D>().transform.right * bulletSpeed;
+        
+        enemyProjectile = bullet.GetComponent<Rigidbody2D>().gameObject.GetComponent<EnemyProjectile>();
 
         timer = 0;
+        Destroy(bullet, bulletLifetime);
+    }
+
+    public Vector2 GetShootDir()
+    {
+        Transform playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
+
+        return (playerTrans.position - transform.position).normalized;
     }
 }

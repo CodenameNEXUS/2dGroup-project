@@ -9,14 +9,14 @@ public class knockback : MonoBehaviour
     public float constForce = 5f;
     public float inputForce = 7.5f;
 
-    private Rigidbody rb;
+    private Rigidbody2D rb;
 
     private Coroutine KnockbackCoroutine;
     public bool IsBeingKnockedBack {  get; private set; }
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public IEnumerator KnockbackAction(Vector2 hitDirection, Vector2 constantForceDirection, float inputDirection)
@@ -43,7 +43,7 @@ public class knockback : MonoBehaviour
             //combine Knockback with input force
             if (inputDirection != 0)
             {
-                _combinedForce = _knockbackForce + new Vector2(inputDirection, 0f);
+                _combinedForce = _knockbackForce + new Vector2(inputDirection * inputForce, 0f);
             }
             else
             {

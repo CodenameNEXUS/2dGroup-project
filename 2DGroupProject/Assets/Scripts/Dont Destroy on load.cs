@@ -50,6 +50,12 @@ public class DontDestroyonload : MonoBehaviour
         }
         SpawnPos = GameObject.FindGameObjectWithTag("SpawnPos");
         gameObject.transform.position = SpawnPos.transform.position;
+
+        if (OriginalPlayer == false)
+        {
+            Destroy(gameObject);
+
+        }
     }
     private void OnLevelWasLoaded(int level)
     {
@@ -67,6 +73,7 @@ public class DontDestroyonload : MonoBehaviour
         if (OriginalPlayer == false)
         {
             Destroy(gameObject);
+            
         }
         SpawnPos = GameObject.FindGameObjectWithTag("SpawnPos");
         gameObject.transform.position = SpawnPos.transform.position;

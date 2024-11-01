@@ -17,6 +17,10 @@ TagManager:
   - PlayerBullet
   - Rocket
   - Hazards
+  - enemybullet
+  - Bat
+  - menu
+  - bossbite
   layers:
   - Default
   - TransparentFX

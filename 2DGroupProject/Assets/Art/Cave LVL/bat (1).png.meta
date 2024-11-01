@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cc5908af0f4cdc64fa469f80f24efabb
+guid: 35ccda44de3a4514cb3252da4e0d109f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1800
+  spritePixelsToUnits: 180
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bat_0
+      name: bat (1)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 7200
-        width: 2400
-        height: 2400
+        y: 840
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32776d4fa04fc254ea7c3d88b28325b5
-      internalID: 839544752
+      spriteID: b616c4ef35dca55468c4e80a88e04536
+      internalID: 467242762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_1
+      name: bat (1)_1
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 7200
-        width: 2400
-        height: 2400
+        x: 280
+        y: 840
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b6790f33f9cd874faa0943661c98095
-      internalID: -34193325
+      spriteID: 23f5f545d72d1684ab1d7e8ab8c889ad
+      internalID: -1906948362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_2
+      name: bat (1)_2
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 7200
-        width: 2400
-        height: 2400
+        x: 560
+        y: 840
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 287e7b4e05a685a42b9fcc248602b3be
-      internalID: 1922634328
+      spriteID: cbad14586157e4940bcf623c8a901c57
+      internalID: -2001516462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_3
+      name: bat (1)_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4800
-        width: 2400
-        height: 2400
+        x: 840
+        y: 840
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81e0d9a41131cba4da53db58d88b2324
-      internalID: 1953118293
+      spriteID: c03ad3ef03e99e04faa8676b013ff422
+      internalID: -1414040729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_4
+      name: bat (1)_4
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 4800
-        width: 2400
-        height: 2400
+        x: 280
+        y: 560
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07cb13518f1c73e439e000bf06261716
-      internalID: -1076874721
+      spriteID: 4b8bc9b90d0158048a7b9329ed2e89e6
+      internalID: -891573118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_5
+      name: bat (1)_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2400
-        width: 2400
-        height: 2400
+        x: 560
+        y: 560
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36e22ac0ed43a714aa8ed57fe20a8e22
-      internalID: 357235789
+      spriteID: 41ec3d525538c484790f32f05257d837
+      internalID: -1904374873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_6
+      name: bat (1)_6
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 2400
-        width: 2400
-        height: 2400
+        x: 840
+        y: 560
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9321326a3e1c3f14e82b6a57e5c10ff5
-      internalID: 1450363678
+      spriteID: 40f45ddd85c671044be71bdee35461f7
+      internalID: -1906888426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_7
+      name: bat (1)_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 280
+        width: 280
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cefdf7eec51a5047aea3bfae927a853
+      internalID: -1294103456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat (1)_8
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 280
+        width: 280
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd507e30f172a3419dffbb2eeb2cae0
+      internalID: 727266771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat (1)_9
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 280
+        width: 280
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33775e8c6e92427429a8e7a836e8b2dc
+      internalID: -44574592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat (1)_10
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2400
-        height: 2400
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54f79ae77c864d140af1248f2d96e5c8
-      internalID: 1615088132
+      spriteID: 10984d5e433b7f24eb8f0506f1744df7
+      internalID: 649400064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_8
+      name: bat (1)_11
       rect:
         serializedVersion: 2
-        x: 2400
+        x: 280
         y: 0
-        width: 2400
-        height: 2400
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e591f55ccfee052449ce39fb49a1c4dd
-      internalID: -1023357510
+      spriteID: 3f4d41f7bf89e2a44a854aa0a74425ed
+      internalID: -804327486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_9
+      name: bat (1)_12
       rect:
         serializedVersion: 2
-        x: 4800
+        x: 560
         y: 0
-        width: 2400
-        height: 2400
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,8 +363,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a0e4a1916d85a641814c3d955617231
-      internalID: 307352566
+      spriteID: 0e36cc52fc832fd458aea12f250fb383
+      internalID: -1383152644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat (1)_13
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 280
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73945ec3b35bc47469aad76d6c429a89
+      internalID: 287529000
       vertices: []
       indices: 
       edges: []
@@ -317,16 +401,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bat_0: 839544752
-      bat_1: -34193325
-      bat_2: 1922634328
-      bat_3: 1953118293
-      bat_4: -1076874721
-      bat_5: 357235789
-      bat_6: 1450363678
-      bat_7: 1615088132
-      bat_8: -1023357510
-      bat_9: 307352566
+      bat (1)_0: 467242762
+      bat (1)_1: -1906948362
+      bat (1)_10: 649400064
+      bat (1)_11: -804327486
+      bat (1)_12: -1383152644
+      bat (1)_13: 287529000
+      bat (1)_2: -2001516462
+      bat (1)_3: -1414040729
+      bat (1)_4: -891573118
+      bat (1)_5: -1904374873
+      bat (1)_6: -1906888426
+      bat (1)_7: -1294103456
+      bat (1)_8: 727266771
+      bat (1)_9: -44574592
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
