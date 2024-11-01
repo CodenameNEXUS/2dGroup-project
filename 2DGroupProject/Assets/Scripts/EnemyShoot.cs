@@ -16,7 +16,7 @@ public class EnemyShoot : MonoBehaviour
     [SerializeField]
     GameObject enemybullet;
     float shootDistance = 5;
-    [SerializeField] private Rigidbody2D bulletPrefab;
+    
 
 
     
