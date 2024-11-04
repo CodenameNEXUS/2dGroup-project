@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -27,6 +28,12 @@ public class PlayerShoot : MonoBehaviour
     float boomSpeed = 10f;
     [SerializeField]
     float SwapDelay = 0.1f;
+    bool TF4 = false;
+    bool TF3 = false;
+    bool TF2 = false;
+    bool TF1 = false;
+    [SerializeField]
+    string levelToLoad = "Space";
     // Start is called before the first frame update
     void Start()
     {
@@ -66,7 +73,7 @@ public class PlayerShoot : MonoBehaviour
             bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * bulletSpeed;
             Destroy(bullet, bulletLifetime);
         }
-        if (Input.GetButton("Fire1") && timer > boomDelay && boom)
+        if (Input.GetButton("Fire1") && timer > boomDelay && boom && TF1 && TF2)
         {
             timer = 0; //reset timer
                        //shoot towrds mouse cursor
@@ -81,6 +88,31 @@ public class PlayerShoot : MonoBehaviour
             //push the bullet towards the mouse
             bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * boomSpeed;
             Destroy(bullet, rocketLifetime);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "rocket1")
+        {
+            TF1 = true;
+        }
+        if (collision.gameObject.tag == "rocket2")
+        {
+            TF2 = true;
+        }
+        if (collision.gameObject.tag == "rocket3")
+        {
+            TF3 = true;
+        }
+        if (TF1 && TF2 && TF3)
+        {
+            TF4 = true;
+            Debug.Log("TF4");
+        }
+        if (collision.gameObject.tag == "rocketHome" && TF4 == true)
+        {
+            Debug.Log("you win for now");
+            SceneManager.LoadScene(levelToLoad);
         }
     }
 
