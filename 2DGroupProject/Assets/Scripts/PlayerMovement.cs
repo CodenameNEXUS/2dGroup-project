@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(new Vector2(0, 100 * jumpSpeed));
                 grounded = false;
             }
-            /*anim.SetFloat("y", velocity.y);
+            anim.SetFloat("y", velocity.y);
             anim.SetBool("grounded", grounded);
             int x = (int)Input.GetAxisRaw("Horizontal");
             anim.SetInteger("x", x);
@@ -47,8 +47,8 @@ public class PlayerMovement : MonoBehaviour
             else if (x < 0)
             {
                 GetComponent<SpriteRenderer>().flipX = true;
-            }*/
-       //}
+            }
+        //}
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
