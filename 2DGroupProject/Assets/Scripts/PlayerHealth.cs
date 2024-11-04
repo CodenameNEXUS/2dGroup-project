@@ -48,9 +48,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHeal
         currentHealth += HealAmount;
 
         _healthBar.UpdateHealthBar(maxhealth, currentHealth);
-        if (currentHealth >= 101)
+        if (currentHealth >= maxhealth + 1)
         {
-            currentHealth = 100;
+            currentHealth = maxhealth;
         }
 
 
