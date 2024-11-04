@@ -810,6 +810,7 @@ GameObject:
   - component: {fileID: 2338720753571792668}
   - component: {fileID: 8918361029186510541}
   - component: {fileID: 5164152392281447085}
+  - component: {fileID: 1763816883550919805}
   m_Layer: 8
   m_Name: player
   m_TagString: Player
@@ -877,8 +878,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0, g: 0.007976532, b: 1, a: 1}
+  m_Sprite: {fileID: -972824662, guid: 6418b658cbb628247b5fe6b3af35ce5d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -975,18 +976,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.0131721}
+  m_Offset: {x: 0, y: -1.443915}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 2.9333332, y: 2.9333332}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.049489915}
+  m_Size: {x: 1, y: 0.049490213}
   m_EdgeRadius: 0
 --- !u!114 &3143616419325437917
 MonoBehaviour:
@@ -1024,6 +1025,7 @@ MonoBehaviour:
   boom: 0
   boomSpeed: 35.6
   SwapDelay: 0.1
+  levelToLoad: Space
 --- !u!114 &6064648714070897114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,8 +1072,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.93273926, y: 1.9663695}
+  m_Offset: {x: 0.04779625, y: -0.48678046}
+  m_Size: {x: 0.55366135, y: 1.8213311}
   m_Direction: 0
 --- !u!114 &8918361029186510541
 MonoBehaviour:
@@ -1086,7 +1088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbacktime: 0.2
-  hitDiretionForce: 5
+  hitDiretionForce: 0.2
   constForce: 30
   inputForce: 10
 --- !u!70 &5164152392281447085
@@ -1121,9 +1123,30 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.051094055, y: -0.48348415}
+  m_Size: {x: 0.5945511, y: 1.8615544}
   m_Direction: 0
+--- !u!95 &1763816883550919805
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866817104973624924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18fe63dde3f40ed48b695e2a0d877619, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3541117425247409561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,6 +1711,7 @@ GameObject:
   - component: {fileID: 7495975242796967367}
   - component: {fileID: 4279539982138019897}
   - component: {fileID: 8787367026037169676}
+  - component: {fileID: 6317223015776369411}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
@@ -1753,6 +1777,18 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!114 &8787367026037169676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8000675244910058456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b2d53472c3b024db4d744ed49c6d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6317223015776369411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
