@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7436119751961769058}
   - component: {fileID: 7734752531236927515}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Light 2D (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: -2135587590177832490}
   - component: {fileID: 3605672584775820151}
   - component: {fileID: 8782202286135137796}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: RocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}

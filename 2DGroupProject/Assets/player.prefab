@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 6531424106849532810}
   - component: {fileID: 3965347695917614634}
   - component: {fileID: 4434109638785721671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cool arm_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

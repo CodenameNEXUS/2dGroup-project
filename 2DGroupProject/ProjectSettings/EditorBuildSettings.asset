@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: 62879a05cf06c0c4ea5abb284b7048a6
+  - enabled: 1
+    path: Assets/Scenes/Ocean.unity
+    guid: f639d2db04e97724daa1fb01bfc88f57
   m_configObjects: {}
