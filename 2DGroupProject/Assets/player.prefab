@@ -1156,7 +1156,8 @@ MonoBehaviour:
   boomSpeed: 35.6
   SwapDelay: 0.1
   levelToLoad: Ocean
-  gun: {fileID: 2314232205661161343}
+  Gun: {fileID: 5614723078032058976}
+  Rocketlauncher: {fileID: 2263433652715309683}
 --- !u!114 &6064648714070897114
 MonoBehaviour:
   m_ObjectHideFlags: 0
