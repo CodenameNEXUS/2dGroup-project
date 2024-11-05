@@ -130,7 +130,11 @@ public class PlayerShoot : MonoBehaviour
         }
         if (collision.gameObject.tag == "rocketHome" && TF4 == true)
         {
-            Debug.Log("you win for now");
+            
+            SceneManager.LoadScene(levelToLoad);
+        }
+        if (collision.gameObject.tag == "End")
+        {
             SceneManager.LoadScene(levelToLoad);
         }
     }

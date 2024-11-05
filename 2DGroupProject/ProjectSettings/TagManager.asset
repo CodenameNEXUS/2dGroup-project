@@ -21,6 +21,7 @@ TagManager:
   - Bat
   - menu
   - bossbite
+  - door
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] private float maxHealth = 10f;
 
+    //[SerializeField]
+    //GameObject door;
+
     private float currentHealth;
 
     private void Start()
@@ -26,6 +29,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     private void Die()
     {
+        //GameObject End = Instantiate(door, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
