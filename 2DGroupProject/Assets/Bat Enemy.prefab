@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6b9488bd5d8b1448cab5250b0353c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 100
 --- !u!95 &2207312445623497926
 Animator:
   serializedVersion: 5
@@ -257,4 +257,4 @@ MonoBehaviour:
   bulletLifetime: 0.18
   shootDelay: 1.94
   enemybullet: {fileID: 5117431761007022077, guid: 858bcbf80009aff429562232a5e6c969, type: 3}
-  prefab: {fileID: 5117431761007022077, guid: 858bcbf80009aff429562232a5e6c969, type: 3}
+  shootDistance: 5

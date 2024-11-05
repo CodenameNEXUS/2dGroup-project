@@ -40,14 +40,14 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("grounded", grounded);
             int x = (int)Input.GetAxisRaw("Horizontal");
             anim.SetInteger("x", x);
-            if (x > 0)
+            /*if (x > 0)
             {
                 GetComponent<SpriteRenderer>().flipX = false;
             }
             else if (x < 0)
             {
                 GetComponent<SpriteRenderer>().flipX = true;
-            }
+            }*/
         //}
     }
     private void OnTriggerEnter2D(Collider2D collision)

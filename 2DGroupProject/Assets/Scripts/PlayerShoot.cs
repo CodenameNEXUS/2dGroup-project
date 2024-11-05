@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -34,6 +35,9 @@ public class PlayerShoot : MonoBehaviour
     bool TF1 = false;
     [SerializeField]
     string levelToLoad = "Space";
+
+    [SerializeField] private GameObject gun;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,8 +45,10 @@ public class PlayerShoot : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        
+
         timer += Time.deltaTime; //0.016667 = 60 fps
                                  //IF you click
         if (Input.GetKeyUp(KeyCode.E) && boom && timer > SwapDelay)
@@ -72,6 +78,7 @@ public class PlayerShoot : MonoBehaviour
             //push the bullet towards the mouse
             bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * bulletSpeed;
             Destroy(bullet, bulletLifetime);
+            
         }
         if (Input.GetButton("Fire1") && timer > boomDelay && boom && TF1 && TF2)
         {
@@ -115,6 +122,8 @@ public class PlayerShoot : MonoBehaviour
             SceneManager.LoadScene(levelToLoad);
         }
     }
+    
+
 
     /*if (Input.GetButton("Fire1") && timer > shootDelay)
             {
