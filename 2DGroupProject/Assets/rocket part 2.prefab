@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 314808696147313690}
   - component: {fileID: 5431627053226187875}
   - component: {fileID: 1494399159964490439}
+  - component: {fileID: 1853850489775494843}
   m_Layer: 0
   m_Name: rocket part 2
   m_TagString: rocket2
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5df593ddae38bd4dbb945f663651213, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1853850489775494843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6915773337078129267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf881d620ff65a4895fd32874015d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
