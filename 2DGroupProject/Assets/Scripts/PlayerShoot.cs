@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -36,12 +37,15 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     string levelToLoad = "Space";
 
-    [SerializeField] private GameObject gun;
+    [SerializeField] Image Gun;
+
+    [SerializeField] Image Rocketlauncher;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Gun.enabled = true;
+        Rocketlauncher.enabled = false;
     }
 
     // Update is called once per frame
@@ -56,15 +60,21 @@ public class PlayerShoot : MonoBehaviour
             shoot = true;
             boom = false;
             timer = 0;
+            Gun.enabled = true;
+            Rocketlauncher.enabled = false;
         }
-        if (Input.GetKeyUp(KeyCode.E) && shoot && timer > SwapDelay)
+        if (Input.GetKeyUp(KeyCode.E) && shoot && timer > SwapDelay && TF1 && TF2)
         {
             shoot = false;
             boom = true;
             timer = boomDelay - 0.1f;
+            Gun.enabled = false;
+            Rocketlauncher.enabled = true;
         }
         if (Input.GetButton("Fire1") && timer > shootDelay && shoot)
         {
+            Gun.enabled = true;
+            Rocketlauncher.enabled = false;
             timer = 0; //reset timer
                        //shoot towrds mouse cursor
             Vector3 mousePos = Input.mousePosition;
@@ -82,6 +92,8 @@ public class PlayerShoot : MonoBehaviour
         }
         if (Input.GetButton("Fire1") && timer > boomDelay && boom && TF1 && TF2)
         {
+            Gun.enabled = false;
+            Rocketlauncher.enabled = true;
             timer = 0; //reset timer
                        //shoot towrds mouse cursor
             Vector3 mousePos = Input.mousePosition;
