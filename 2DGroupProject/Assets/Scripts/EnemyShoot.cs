@@ -53,10 +53,11 @@ public class EnemyShoot : MonoBehaviour
     }
     private void shoot()
     {
-        
+        Vector3 shootDir = player.transform.position - transform.position;
         timer += Time.deltaTime;
         GameObject bullet = Instantiate(enemybullet, transform.position, Quaternion.identity);
         //push the bullet towrads the player
+        bullet.transform.right = shootDir;
 
         bullet.GetComponent<Rigidbody2D>().transform.right = GetShootDir();
 

@@ -83,6 +83,7 @@ public class PlayerShoot : MonoBehaviour
             Vector3 mouseDir = mousePos - transform.position;
             //spawn bullet
             GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
+            bullet.transform.right = mouseDir;
             //normalize the vector so we dont have wonky speeds
             mouseDir.Normalize();
             //push the bullet towards the mouse
@@ -102,6 +103,7 @@ public class PlayerShoot : MonoBehaviour
             Vector3 mouseDir = mousePos - transform.position;
             //spawn bullet
             GameObject bullet = Instantiate(rocket, transform.position, Quaternion.identity);
+            bullet.transform.right = mouseDir;
             //normalize the vector so we dont have wonky speeds
             mouseDir.Normalize();
             //push the bullet towards the mouse
