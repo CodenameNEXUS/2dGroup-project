@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2928347330637451899}
   - component: {fileID: 3960380536736557258}
   - component: {fileID: 5744687972674580672}
-  - component: {fileID: 4127051157699926060}
+  - component: {fileID: 7766084286654351475}
   m_Layer: 9
   m_Name: Fish
   m_TagString: enemy
@@ -245,7 +245,7 @@ MonoBehaviour:
   shootDelay: 6.81
   enemybullet: {fileID: 6107121493427092422, guid: 5518aad96d8792b4a903e3187587568a, type: 3}
   shootDistance: 333.49
---- !u!114 &4127051157699926060
+--- !u!114 &7766084286654351475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,8 +254,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7237768382313179016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6188327d335c72441aadc5c0ecfa94b4, type: 3}
+  m_Script: {fileID: 11500000, guid: af6b9488bd5d8b1448cab5250b0353c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2000
-  door: {fileID: 307884971889420953, guid: 7cf84aa09ab66c446b258b9cc8c775d1, type: 3}

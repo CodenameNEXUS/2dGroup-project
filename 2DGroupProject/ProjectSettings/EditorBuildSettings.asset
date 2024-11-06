@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 62879a05cf06c0c4ea5abb284b7048a6
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Landon TEST.unity
     guid: 740f1f456ed077440809ecd75095cd8c
   - enabled: 1
@@ -18,9 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cave.unity
     guid: 8eb3d5407110cf740bc58bcb4f78eb04
   - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
-    guid: 62879a05cf06c0c4ea5abb284b7048a6
-  - enabled: 1
     path: Assets/Scenes/Ocean.unity
     guid: f639d2db04e97724daa1fb01bfc88f57
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 68cc359c8449b9046a4348ff3e104d5f
   m_configObjects: {}

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -135,9 +134,9 @@ public class PlayerShoot : MonoBehaviour
             
             SceneManager.LoadScene(levelToLoad);
         }
-        if (collision.gameObject.tag == "End")
+        if (collision.gameObject.tag == "door")
         {
-            SceneManager.LoadScene(levelToLoad);
+            SceneManager.LoadScene("End");
         }
     }
     

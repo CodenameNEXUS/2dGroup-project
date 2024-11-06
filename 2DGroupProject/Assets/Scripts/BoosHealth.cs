@@ -22,13 +22,15 @@ public class BoosHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            GameObject End = Instantiate(door, transform.position, Quaternion.identity);
             Die();
+
         }
     }
 
     private void Die()
     {
-        GameObject End = Instantiate(door, transform.position, Quaternion.identity);
+        
         Destroy(gameObject);
     }
 }
